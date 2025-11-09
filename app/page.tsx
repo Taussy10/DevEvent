@@ -1,9 +1,20 @@
+import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
 import Navbar from "@/components/Navbar";
+import { Images } from "@/constants/images";
 import React from "react";
 // import LightRays from "./LightRays";
 const Home = () => {
-  const array = [1, 2, 3, 4, 5,6];
+  const array = [
+    {
+      image: Images.event1,
+      title: "Event 1"
+    },
+    {
+      image: Images.event2,
+      title: "Event 2"
+    }
+  ];
   return (
     <section className="">
       {/* <Navbar /> */}
@@ -25,7 +36,10 @@ const Home = () => {
         <ul className="events">
           {/* direct return not with return statemtn and curly */}
           {array.map((item, index) => (
-            <li key={index}>Event {item}</li>
+            <div key={index}>
+              {/* Event {item.title} */}
+            <EventCard {...item} />
+            </div>
           ))}
         
         </ul>
