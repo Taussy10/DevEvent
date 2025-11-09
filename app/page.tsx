@@ -1,3 +1,4 @@
+import ExploreBtn from "@/components/ExploreBtn";
 import React from "react";
 // import LightRays from "./LightRays";
 const Home = () => {
@@ -11,6 +12,8 @@ const Home = () => {
         Event You Can't Miss
       </h1>
       <p className=" text-center mt5 ">Hackathons, Meetups and Conferences, All in One Place</p>
+
+      <ExploreBtn/>
     </section>
   );
 };
