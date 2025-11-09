@@ -10,7 +10,7 @@ import { Icons } from "@/constants/icons";
 // why? cause first that's a page and 2nd this is how we write url name
 const ExploreBtn = () => {
   return (
-    <div>
+    <div className="">
       <button
         type="button"
         // Why Id? so that we refer it later
@@ -20,10 +20,16 @@ const ExploreBtn = () => {
       >
         <a href="#events">
           Explore Events
-          <Image src={Icons.arrowDown} alt="Pic of event" />
+          {/* We write alt tag like this */}
+          <Image
+            src={Icons.arrowDown}
+            alt="arrow-down"
+            width={24}
+            height={24}
+          />
         </a>
       </button>
-      <h1></h1>
+      
     </div>
   );
 };

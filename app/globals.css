@@ -191,7 +191,7 @@
 
       div {
         @apply flex flex-row gap-2;
-      }
+      } 
     }
   }
 
