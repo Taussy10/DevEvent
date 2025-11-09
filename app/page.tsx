@@ -2,13 +2,18 @@ import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
 import Navbar from "@/components/Navbar";
 import { Images } from "@/constants/images";
+import { events } from "@/lib/data";
 import React from "react";
 // import LightRays from "./LightRays";
 const Home = () => {
   const array = [
     {
       image: Images.event1,
-      title: "Event 1"
+      title: "Event 1",
+      slug:"even-1", // for identifying
+      location: "San Fransisco, CA",
+      date: "28the October 2025",
+      time: "12:25pm - 2:40pm"
     },
     {
       image: Images.event2,
@@ -35,9 +40,14 @@ const Home = () => {
         <h3>Featured Events</h3>
         <ul className="events">
           {/* direct return not with return statemtn and curly */}
-          {array.map((item, index) => (
+          {events.map((item, index) => (
             <div key={index}>
               {/* Event {item.title} */}
+              {/* What is ...item ? Whatever the item contains , we spreaded it 
+              then we can get those 
+              example item = {"title", "image"}
+              by spreading: ...item = {"title"}, "image"
+              */}
             <EventCard {...item} />
             </div>
           ))}

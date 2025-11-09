@@ -2,22 +2,43 @@ import { Images } from "@/constants/images";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-
-interface Props {
-  title: string;
-  image: StaticImageData
-}
+import { EventItem } from "@/lib/data";
+import { Icons } from "@/constants/icons";
 
 // Each event card will contain diff data so make it dynamic by props
-const EventCard = ({ title, image }: Props) => {
+const EventCard = ({ slug, image, title, location, date, time }: EventItem) => {
   return (
     // Cause each card will clickable and send data to details one
-    <Link href={'/event-details/{title}'} id="event-card">
-      <Image src={image} alt={title} width={410} height={300} 
-    //   the className poster is built in className check in global.css
-      className="poster"
+    // You have to pass here slug
+    <Link href={`/event-details/${slug}`} id="event-card">
+      <Image
+        src={image}
+        alt={title}
+        width={410}
+        height={300}
+        //   the className poster is built in className check in global.css
+        className="poster"
       />
+      <div className=" flex flex-row  gap-2">
+        <Image src={Icons.pin} alt="location" />
+        <p>{location}</p>
+      </div>
       <p className="title">{title}</p>
+
+      {/* Div for date and timing */}
+      <div className=" flex flex-row   gap-12">
+
+        <div className=" flex flex-row  gap-2">
+        <Image src={Icons.calendar} alt="calendar" />
+        <p>{date}</p>
+        </div>
+
+        <div className=" flex flex-row gap-2">
+        <Image src={Icons.clock} alt="clock" />
+        <p>{time}</p>
+        </div>
+
+      </div>
     </Link>
   );
 };
