@@ -19,7 +19,7 @@ const ExploreBtn = () => {
         onClick={() => console.log("hello")}
       >
         <a href="#events">
-          Explore Events
+          <p className=" text-xl font-semibold">Explore Events</p>
           {/* We write alt tag like this */}
           <Image
             src={Icons.arrowDown}

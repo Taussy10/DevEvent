@@ -2,7 +2,7 @@ import EventCard from "@/components/EventCard";
 import ExploreBtn from "@/components/ExploreBtn";
 import Navbar from "@/components/Navbar";
 import { Images } from "@/constants/images";
-import { events } from "@/lib/data";
+import { events } from "@/lib/event-list-data";
 import React from "react";
 // import LightRays from "./LightRays";
 const Home = () => {
@@ -30,19 +30,19 @@ const Home = () => {
         <br />
         Event You Can't Miss
       </h1>
-      <p className=" text-center mt-5 ">
+      <p className=" text-center mt-5   text-2xl ">
         Hackathons, Meetups and Conferences, All in One Place
       </p>
 
       <ExploreBtn />
 
       <div className=" mt-20 space-y-7">
-        <h3>Featured Events</h3>
+        <h3 id="#events">Featured Events</h3>
         <ul className="events">
           {/* direct return not with return statemtn and curly */}
           {events.map((item, index) => (
             <div key={index}>
-              {/* Event {item.title} */}
+{/* We are sending data EventCard component */}
               {/* What is ...item ? Whatever the item contains , we spreaded it 
               then we can get those 
               example item = {"title", "image"}

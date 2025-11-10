@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Dynamic routes data passed to new route as params
-const EventDetails = async({params}) => {
+const EventDetails = async({params}:{Promise}) => {
  const {id} = await params
 
  console.log("CONSOLE :",id);

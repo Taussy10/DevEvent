@@ -10,6 +10,8 @@ export type EventItem = {
   time: string; // e.g., "09:00 AM"
 };
 
+
+
 export const events: EventItem[] = [
   {
     image: Images.event1,
@@ -68,5 +70,8 @@ export const events: EventItem[] = [
   //   time: "09:00 AM",
   // },
 ];
+
+
+
 
 export default events;
