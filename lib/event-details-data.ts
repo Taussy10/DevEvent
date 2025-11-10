@@ -19,6 +19,7 @@ export type Tag =
   | "UI/UX"
   | "Full Stack";
 
+
 // export type AgendaItem = {
 //   time: string
 // };
@@ -39,7 +40,7 @@ export type EventDetails = {
     address: string;
     duration: string;
     format: string; // e.g., "In-Person", "Virtual", "Hybrid"
-    capacity?: number;
+    date?: string;
     price?: string;
     registrationLink?: string;
   };
@@ -49,8 +50,7 @@ export type EventDetails = {
 };
 
 export const eventDetails: EventDetails[] = [
-  
-   {
+  {
     slug: "react-summit-us-2025",
     overview:
       "Join us for the premier React conference in the United States! React Summit US 2025 brings together the brightest minds in the React ecosystem for two days of inspiring talks, hands-on workshops, and networking opportunities. Whether you're a seasoned React developer or just getting started, this event offers something for everyone. Learn about the latest features, best practices, and cutting-edge techniques from industry leaders and core team members.",
@@ -59,7 +59,7 @@ export const eventDetails: EventDetails[] = [
       address: "747 Howard St, San Francisco, CA 94103, USA",
       duration: "2 days",
       format: "In-Person",
-      capacity: 2000,
+      date: "28th October 2025 - 29th October 2025",
       price: "Early Bird: $299 | Regular: $399",
       registrationLink: "https://reactsummit.com/register",
     },
@@ -80,14 +80,12 @@ export const eventDetails: EventDetails[] = [
     tags: [
       "Frontend",
       "React",
-      "JavaScript",
       "TypeScript",
-      "UI/UX",
       "Full Stack",
     ],
   },
   {
-    slug: "amazon-summit-us-2025",
+    slug: "kubecon-cloudnativecon-eu-2026",
     overview:
       "Join us for the premier React conference in the United States! React Summit US 2025 brings together the brightest minds in the React ecosystem for two days of inspiring talks, hands-on workshops, and networking opportunities. Whether you're a seasoned React developer or just getting started, this event offers something for everyone. Learn about the latest features, best practices, and cutting-edge techniques from industry leaders and core team members.",
     eventDetails: {
@@ -95,7 +93,8 @@ export const eventDetails: EventDetails[] = [
       address: "747 Howard St, San Francisco, CA 94103, USA",
       duration: "2 days",
       format: "In-Person",
-      capacity: 2000,
+      
+      date: "26th October 2025 - 28th October 2025",
       price: "Early Bird: $299 | Regular: $399",
       registrationLink: "https://reactsummit.com/register",
     },
@@ -112,17 +111,13 @@ export const eventDetails: EventDetails[] = [
       "06:00 PM - 08:00 PM | Networking Reception",
     ],
     organizer:
-      "The React Summit Team is dedicated to bringing together the React community through world-class conferences and events. With years of experience organizing developer conferences, we're passionate about creating spaces where developers can learn, share, and connect.",
+      "The KubeCon Summit Team is dedicated to bringing together the React community through world-class conferences and events. With years of experience organizing developer conferences, we're passionate about creating spaces where developers can learn, share, and connect.",
     tags: [
-      "Frontend",
-      "React",
+      "Cloud",
       "JavaScript",
-      "TypeScript",
-      "UI/UX",
       "Full Stack",
     ],
   },
-
 ];
 
 export default EventDetails;
