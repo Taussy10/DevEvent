@@ -10,7 +10,14 @@ const EventCard = ({ slug, image, title, location, date, time }: EventItem) => {
   return (
     // Why Link ? Cause each card will clickable and send data to details one
     // What is slug ? It's short URL = slug part of big URL(/event-details)
-    <Link href={`/event-details/${slug}`} locale="fr" id="event-card">
+    <Link
+      href={{
+        pathname: `/event-details/${slug}`,
+        // query: {image},
+      }}
+      locale="fr"
+      id="event-card"
+    >
       <Image
         src={image}
         alt={title}

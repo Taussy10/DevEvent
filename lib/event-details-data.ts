@@ -1,3 +1,6 @@
+import { Images } from "@/constants/images";
+import { StaticImageData } from "next/image";
+
 export type Tag =
   | "Frontend"
   | "Backend"
@@ -35,11 +38,11 @@ export type Organizer = {
 export type EventDetails = {
   slug: string;
   overview: string;
+  image: StaticImageData;
   eventDetails: {
-    venue: string;
     address: string;
     duration: string;
-    format: string; // e.g., "In-Person", "Virtual", "Hybrid"
+    mode: string; // e.g., "In-Person", "Virtual", "Hybrid"
     date?: string;
     price?: string;
     registrationLink?: string;
@@ -54,11 +57,11 @@ export const eventDetails: EventDetails[] = [
     slug: "react-summit-us-2025",
     overview:
       "Join us for the premier React conference in the United States! React Summit US 2025 brings together the brightest minds in the React ecosystem for two days of inspiring talks, hands-on workshops, and networking opportunities. Whether you're a seasoned React developer or just getting started, this event offers something for everyone. Learn about the latest features, best practices, and cutting-edge techniques from industry leaders and core team members.",
+      image: Images.event1,
     eventDetails: {
-      venue: "Moscone Center",
-      address: "747 Howard St, San Francisco, CA 94103, USA",
+      address: "Moscone Center, San Francisco, CA, USA",
       duration: "2 days",
-      format: "In-Person",
+      mode: "In-Person",
       date: "28th October 2025 - 29th October 2025",
       price: "Early Bird: $299 | Regular: $399",
       registrationLink: "https://reactsummit.com/register",
@@ -88,11 +91,11 @@ export const eventDetails: EventDetails[] = [
     slug: "kubecon-cloudnativecon-eu-2026",
     overview:
       "Join us for the premier React conference in the United States! React Summit US 2025 brings together the brightest minds in the React ecosystem for two days of inspiring talks, hands-on workshops, and networking opportunities. Whether you're a seasoned React developer or just getting started, this event offers something for everyone. Learn about the latest features, best practices, and cutting-edge techniques from industry leaders and core team members.",
+    image: Images.event2,
     eventDetails: {
-      venue: "Moscone Center",
-      address: "747 Howard St, San Francisco, CA 94103, USA",
+      address: "Moscone Center, San Francisco, CA 94103, USA",
       duration: "2 days",
-      format: "In-Person",
+      mode: "In-Person",
       
       date: "26th October 2025 - 28th October 2025",
       price: "Early Bird: $299 | Regular: $399",
