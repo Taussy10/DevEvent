@@ -18,10 +18,11 @@ export type Tag =
   | "Blockchain"
   | "AI/ML"
   | "Database"
-  | "Security"
+  | "Linux"
   | "UI/UX"
   | "Full Stack";
 
+// ; means end of code.
 
 // export type AgendaItem = {
 //   time: string
@@ -36,6 +37,9 @@ export type Organizer = {
 };
 
 export type EventDetails = {
+  // you always need slug(A part of web URL that identifies a spacific page
+// lcoalhost.com/home slug = home  )
+
   slug: string;
   overview: string;
   image: StaticImageData;
@@ -57,7 +61,7 @@ export const eventDetails: EventDetails[] = [
     slug: "react-summit-us-2025",
     overview:
       "Join us for the premier React conference in the United States! React Summit US 2025 brings together the brightest minds in the React ecosystem for two days of inspiring talks, hands-on workshops, and networking opportunities. Whether you're a seasoned React developer or just getting started, this event offers something for everyone. Learn about the latest features, best practices, and cutting-edge techniques from industry leaders and core team members.",
-      image: Images.event1,
+    image: Images.event1,
     eventDetails: {
       address: "Moscone Center, San Francisco, CA, USA",
       duration: "2 days",
@@ -80,12 +84,7 @@ export const eventDetails: EventDetails[] = [
     ],
     organizer:
       "The React Summit Team is dedicated to bringing together the React community through world-class conferences and events. With years of experience organizing developer conferences, we're passionate about creating spaces where developers can learn, share, and connect.",
-    tags: [
-      "Frontend",
-      "React",
-      "TypeScript",
-      "Full Stack",
-    ],
+    tags: ["Frontend", "React", "TypeScript", "Full Stack"],
   },
   {
     slug: "kubecon-cloudnativecon-eu-2026",
@@ -96,7 +95,7 @@ export const eventDetails: EventDetails[] = [
       address: "Moscone Center, San Francisco, CA 94103, USA",
       duration: "2 days",
       mode: "In-Person",
-      
+
       date: "26th October 2025 - 28th October 2025",
       price: "Early Bird: $299 | Regular: $399",
       registrationLink: "https://reactsummit.com/register",
@@ -108,18 +107,10 @@ export const eventDetails: EventDetails[] = [
       "11:30 AM - 12:15 PM | React Server Components Deep Dive by Sebastian Markbåge",
       "12:15 PM - 01:30 PM | Lunch Break",
       "01:30 PM - 02:15 PM | State Management in Modern React by Michel Weststrate",
-      "02:30 PM - 03:15 PM | Performance Optimization Techniques by Ryan Florence",
-      "03:30 PM - 04:15 PM | Testing React Applications by Guillermo Rauch",
-      "04:30 PM - 05:30 PM | Panel Discussion: React Ecosystem",
-      "06:00 PM - 08:00 PM | Networking Reception",
     ],
     organizer:
       "The KubeCon Summit Team is dedicated to bringing together the React community through world-class conferences and events. With years of experience organizing developer conferences, we're passionate about creating spaces where developers can learn, share, and connect.",
-    tags: [
-      "Cloud",
-      "JavaScript",
-      "Full Stack",
-    ],
+    tags: ["Cloud", "Linux", "Full Stack"],
   },
 ];
 
